@@ -3,7 +3,7 @@ AndroidImageResizer
 
 A Node.js + ImageMagick script for resizing images for Android apps.
 
-## How to Use
+## How to Install
 
 Install [ImageMagick for Node.js](https://github.com/rsms/node-imagemagick).
 
@@ -17,8 +17,12 @@ npm install imagemagick
 brew install imagemagick
 ```
 
-Run this script in a directory with some images.
+## How to Use
 
+Run this script in a directory with some images.
+If the image name contains launcher, script creates mipmap directories.
+ 
+### Run with questions
 ```
 node AndroidImageResizer.js
 ```
@@ -36,6 +40,14 @@ Enter smallest desired image size [xxxhdpi, xxhdpi, xhdpi, hdpi, mdpi, ldpi]: md
 ```
 
 Some folders will appear in your directory with all of your resized images.
+
+### Run with known responses to question
+```
+node AndroidImageResizer.js   param1  param2
+```
+You can launch the script with 2 parameters.
+First is the current density among           [xxxhdpi, xxhdpi, xhdpi, hdpi, mdpi, ldpi]
+Second is the smallest desired density among [xxxhdpi, xxhdpi, xhdpi, hdpi, mdpi, ldpi]
 
 ## License
 
